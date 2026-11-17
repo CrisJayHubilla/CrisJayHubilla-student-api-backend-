@@ -1,18 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "functions": {
-    "api/**": {
-      "runtime": "nodejs20.x",
-      "memory": 1024,
+    "api/**/*.js": {
       "maxDuration": 30
     }
-  },
-  "env": {
-    "MONGODB_URI": process.env.MONGODB_URI,
-    "MONGODB_DB": process.env.MONGODB_DB || "LabAttendanceDB",
-    "MONGODB_STUDENT_COLLECTION": process.env.MONGODB_STUDENT_COLLECTION || "students",
-    "MONGODB_ATTENDANCE_COLLECTION": process.env.MONGODB_ATTENDANCE_COLLECTION || "attendance",
-    "CORS_ORIGINS": process.env.CORS_ORIGINS || "*",
-    "PORT": process.env.PORT || "3000"
   }
 }
